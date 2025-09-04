@@ -47,9 +47,9 @@ For OnePlus devices, you'll need to create a custom build.
 #### Steps:
 
 1.  **Gather Device Information**: You will need:
-    -   Your kernel version (e.g., `5.10`, `5.15`).
-    -   Your processor's codename.
-    -   The branch and configuration files from the OnePlus open-source kernel repository.
+    - Your kernel version (e.g., `5.10`, `5.15`).
+    - Your processor's codename.
+    - The branch and configuration files from the OnePlus open-source kernel repository.
 2.  **Create Custom Build**: Use the link in our [resources section](./links.md) to generate a custom build with your device's information.
 3.  **Flash the Build**:
     - [ ] Download the generated `AnyKernel3` zip file.
@@ -63,18 +63,18 @@ This method is for advanced users who are building a kernel from source.
 
 #### Integration Scripts:
 
--   **Main Branch (GKI)**:
-    ```sh [bash]
-    curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kernel/setup.sh" | bash -s main
-    ```
--   **Non-GKI Branch**:
-    ```sh [bash]        
-    curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kernel/setup.sh" | bash -s nongki
-    ```
--   **SUSFS-Dev Branch (Recommended)**:
-    ```sh [bash]
-    curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kernel/setup.sh" | bash -s susfs-main
-    ```
+- **Main Branch (GKI)**:
+  ```sh [bash]
+  curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kernel/setup.sh" | bash -s main
+  ```
+- **Non-GKI Branch**:
+  ```sh [bash]
+  curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kernel/setup.sh" | bash -s nongki
+  ```
+- **SUSFS-Dev Branch (Recommended)**:
+  ```sh [bash]
+  curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kernel/setup.sh" | bash -s susfs-main
+  ```
 
 ::: warning Required Kernel Configs
 For KPM support, you must enable `CONFIG_KPM=y`.

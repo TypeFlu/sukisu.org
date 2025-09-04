@@ -9,21 +9,27 @@ SukiSU-Ultra is a modern, secure, and powerful root solution designed specifical
 ## Key Features
 
 ### 🔒 Kernel-based su and root access management
+
 Secure root access management at the kernel level, providing better security and performance compared to traditional solutions.
 
 ### 🚫 Not based on OverlayFS module system
+
 Built on Magic Mount technology from 5ec1cff, offering a more stable and reliable foundation.
 
 ### 📱 App Profile
+
 Advanced application profiling system that allows you to lock root privileges in a controlled environment.
 
 ### 🔧 Enhanced Device Support
+
 Bringing back support for non-GKI/GKI 1.0 devices, ensuring compatibility with older Android devices.
 
 ### ⚙️ Extensive Customization
+
 Comprehensive customization options to tailor the root experience to your specific needs.
 
 ### 🔌 KPM Kernel Module Support
+
 Full KernelPatch Module (KPM) functionality for advanced kernel modifications and enhancements.
 
 ## Why Choose SukiSU-Ultra?
@@ -58,11 +64,12 @@ Before installing SukiSU-Ultra, ensure your device meets these requirements:
 ⚠️ **Rooting your device can void your warranty and may cause permanent damage if done incorrectly.**
 
 Always:
+
 - Create a full backup before proceeding
 - Ensure your device is compatible
 - Follow instructions carefully
 - Have a recovery plan ready
-:::
+  :::
 
 ## Support
 

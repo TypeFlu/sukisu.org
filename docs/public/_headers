@@ -3,8 +3,9 @@
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
-  X-XSS-Protection: 1; mode=block
-  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Strict-Transport-Security: "max-age=31536000; includeSubDomains; preload"
+  Permissions-Policy: "camera=(), microphone=(), geolocation=()"
+  Content-Security-Policy: "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
 
 # Cache static assets for maximum performance
 /assets/*
@@ -50,3 +51,10 @@
   
 /sw.js
   Cache-Control: public, max-age=0, must-revalidate
+
+# Offline page and HTML caching
+/*.html
+  Cache-Control: public, max-age=60, must-revalidate
+
+/offline.html
+  Cache-Control: public, max-age=3600

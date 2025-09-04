@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref, computed } from "vue"
-import { useData } from "vitepress"
+import { ref, computed } from 'vue'
+import { useData } from 'vitepress'
 
 const props = defineProps({
   shareText: {
@@ -25,28 +25,40 @@ const props = defineProps({
   },
 })
 
-defineOptions({ name: "ArticleShare" })
+defineOptions({ name: 'ArticleShare' })
 
 const copied = ref(false)
-const isClient =
-    typeof window !== "undefined" && typeof document !== "undefined"
+const isClient = typeof window !== 'undefined' && typeof document !== 'undefined'
 
 const { theme, lang } = useData()
 
-const defaultShareText = computed(() => (lang.value?.toLowerCase().startsWith("zh") ? "分享链接" : "Share link"))
-const defaultCopiedText = computed(() => (lang.value?.toLowerCase().startsWith("zh") ? "已复制!" : "Copied!"))
-const defaultCopyFailedText = computed(() => (lang.value?.toLowerCase().startsWith("zh") ? "复制链接失败:" : "Failed to copy link:"))
+const defaultShareText = computed(() =>
+  lang.value?.toLowerCase().startsWith('zh') ? '分享链接' : 'Share link'
+)
+const defaultCopiedText = computed(() =>
+  lang.value?.toLowerCase().startsWith('zh') ? '已复制!' : 'Copied!'
+)
+const defaultCopyFailedText = computed(() =>
+  lang.value?.toLowerCase().startsWith('zh') ? '复制链接失败:' : 'Failed to copy link:'
+)
 
-const i18nShareText = computed(() => props.shareText ?? (theme.value as any)?.articleShare?.shareText ?? defaultShareText.value)
-const i18nCopiedText = computed(() => props.copiedText ?? (theme.value as any)?.articleShare?.copiedText ?? defaultCopiedText.value)
-const i18nCopyFailedText = computed(() => (theme.value as any)?.articleShare?.copyFailed ?? defaultCopyFailedText.value)
+const i18nShareText = computed(
+  () => props.shareText ?? (theme.value as any)?.articleShare?.shareText ?? defaultShareText.value
+)
+const i18nCopiedText = computed(
+  () =>
+    props.copiedText ?? (theme.value as any)?.articleShare?.copiedText ?? defaultCopiedText.value
+)
+const i18nCopyFailedText = computed(
+  () => (theme.value as any)?.articleShare?.copyFailed ?? defaultCopyFailedText.value
+)
 
 const shareLink = computed(() => {
-  if (!isClient) return ""
+  if (!isClient) return ''
 
   const { origin, pathname, search, hash } = window.location
-  const finalSearch = props.includeQuery ? search : ""
-  const finalHash = props.includeHash ? hash : ""
+  const finalSearch = props.includeQuery ? search : ''
+  const finalHash = props.includeHash ? hash : ''
   return `${origin}${pathname}${finalSearch}${finalHash}`
 })
 
@@ -57,12 +69,12 @@ async function copyToClipboard() {
     if (navigator.clipboard) {
       await navigator.clipboard.writeText(shareLink.value)
     } else {
-      const input = document.createElement("input")
-      input.setAttribute("readonly", "readonly")
-      input.setAttribute("value", shareLink.value)
+      const input = document.createElement('input')
+      input.setAttribute('readonly', 'readonly')
+      input.setAttribute('value', shareLink.value)
       document.body.appendChild(input)
       input.select()
-      document.execCommand("copy")
+      document.execCommand('copy')
       document.body.removeChild(input)
     }
 
@@ -93,10 +105,11 @@ const copiedIconSvg = `
 <template>
   <div class="article-share">
     <button
-        :class="['article-share__button', { copied: copied }]"
-        :aria-label="copied ? i18nCopiedText : i18nShareText"
-        aria-live="polite"
-        @click="copyToClipboard">
+      :class="['article-share__button', { copied: copied }]"
+      :aria-label="copied ? i18nCopiedText : i18nShareText"
+      aria-live="polite"
+      @click="copyToClipboard"
+    >
       <div v-if="!copied" class="content-wrapper">
         <span class="icon" v-html="shareIconSvg"></span>
         {{ i18nShareText }}
@@ -111,7 +124,6 @@ const copiedIconSvg = `
 </template>
 
 <style scoped>
-
 .article-share {
   padding: 14px 0;
 }
@@ -138,7 +150,7 @@ const copiedIconSvg = `
 }
 
 .article-share__button::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: -100%;

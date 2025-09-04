@@ -16,8 +16,8 @@ SukiSu-Ultra can support 3.x kernels (3.4-3.18) through additional back ports
 
 Currently supports the following processor architectures:
 
-| Architecture | Support Level | Notes |
-|-------------|---------------|-------|
-| **arm64-v8a** | ✅ Full Support | Primary target architecture |
-| **armeabi-v7a** | ✅ Basic Support | Bare minimum functionality |
-| **X86_64** | 🟡 Partial Support | Some devices supported |
+| Architecture    | Support Level      | Notes                       |
+| --------------- | ------------------ | --------------------------- |
+| **arm64-v8a**   | ✅ Full Support    | Primary target architecture |
+| **armeabi-v7a** | ✅ Basic Support   | Bare minimum functionality  |
+| **X86_64**      | 🟡 Partial Support | Some devices supported      |

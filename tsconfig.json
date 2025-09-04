@@ -19,12 +19,6 @@
     "esm": true,
     "experimentalSpecifierResolution": "node"
   },
-  "include": [
-    "scripts/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "docs/.vitepress/dist"
-  ]
+  "include": ["scripts/**/*"],
+  "exclude": ["node_modules", "dist", "docs/.vitepress/dist"]
 }
