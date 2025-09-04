@@ -5,9 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "tsx scripts/rebuild-ico.ts && tsx scripts/sync-favicons.ts && vitepress dev docs --host",
-    "build": "tsx scripts/rebuild-ico.ts && tsx scripts/sync-favicons.ts && vitepress build docs && pnpm build:sw:dist",
+    "build": "tsx scripts/sync-favicons.ts && vitepress build docs && pnpm build:sw:dist",
     "preview": "vitepress preview docs",
-    "icons:ico": "tsx scripts/rebuild-ico.ts",
     "build:sw": "tsc scripts/sw.ts --target ES2022 --lib ES2022,WebWorker --outDir docs/public --skipLibCheck",
     "build:sw:dist": "tsc scripts/sw.ts --target ES2022 --lib ES2022,WebWorker --outDir docs/.vitepress/dist --skipLibCheck",
     "build:scripts": "pnpm build:sw",
@@ -41,7 +40,6 @@
     "markdown-it-task-lists": "^2.1.1",
     "prettier": "^3.6.2",
     "terser": "^5.44.0",
-    "to-ico": "^1.1.5",
     "ts-node": "^10.9.2",
     "tsx": "^4.20.5",
     "typescript": "^5.9.2",
