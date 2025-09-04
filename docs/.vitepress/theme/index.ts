@@ -2,9 +2,8 @@
 import DefaultTheme from 'vitepress/theme'
 import { NolebaseGitChangelogPlugin } from '@nolebase/vitepress-plugin-git-changelog/client'
 import 'virtual:group-icons.css'
-import {h} from 'vue'
+import { h, onMounted } from 'vue'
 import './style/style.css'
-import Confetti from './components/Confetti.vue'
 import ArticleShare from './components/ArticleShare.vue'
 import backtotop from './components/backtotop.vue'
 import '@nolebase/vitepress-plugin-git-changelog/client/style.css'
@@ -18,9 +17,17 @@ export default {
     })
   },
   enhanceApp({ app }) {
-    app.use(NolebaseGitChangelogPlugin);
-    app.component('Confetti', Confetti)
+    app.use(NolebaseGitChangelogPlugin)
+
+    // Register service worker in production for offline support and caching
+    if (
+      typeof window !== 'undefined' &&
+      'serviceWorker' in navigator &&
+      (import.meta as any).env?.PROD
+    ) {
+      onMounted(() => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {})
+      })
+    }
   },
 }
-
-

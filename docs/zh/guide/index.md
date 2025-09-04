@@ -13,17 +13,19 @@
 
 ## 如何安装
 
-了解如何在您的设备上 **[安装](./installation)**  SukiSU-Ultra  
+了解如何在您的设备上 **[安装](./installation)** SukiSU-Ultra
 
 ## 如何集成
+
 阅读 **[集成](./how-to-integrate.md)** 将 SukiSU 集成到你的内核中
 
 ## 了解兼容性
+
 检查设备 **[兼容性](./compatibility)** 要求
 
 ## 资源获取
-查找其他资源和 **[下载](./links)**
 
+查找其他资源和 **[下载](./links)**
 
 ## 获取支持
 

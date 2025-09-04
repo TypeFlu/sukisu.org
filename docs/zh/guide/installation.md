@@ -23,6 +23,7 @@
 使用[更多链接](./links)部分提到的链接，用您的设备信息创建自定义构建，然后刷入带有 AnyKernel3 后缀的 zip 文件。
 
 ::: details 展开
+
 - 只需要填写内核版本的前两部分，如 `5.10`、`5.15`、`6.1` 或 `6.6`。
 - 请自行搜索处理器代号，通常是不含数字的英文字母。
 - 可以从一加开源内核仓库中找到分支和配置文件。
@@ -31,6 +32,7 @@
 :::
 
 ## 开始安装
+
 ### 通用 GKI 安装
 
 ::: tip
@@ -57,9 +59,9 @@
 
 1. 获取设备信息
 
-  - 内核版本（前两部分，例如 `5.10`、`5.15`、`6.1`、`6.6`）
-  - 处理器代号（通常是不含数字的英文）
-  - 来自一加开源内核仓库的分支和配置文件
+- 内核版本（前两部分，例如 `5.10`、`5.15`、`6.1`、`6.6`）
+- 处理器代号（通常是不含数字的英文）
+- 来自一加开源内核仓库的分支和配置文件
 
 2. 创建自定义构建
 
@@ -90,6 +92,7 @@ curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kern
 ```
 
 #### SUSFS-Dev 分支（推荐）
+
 ```sh [bash]
 curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kernel/setup.sh" | bash -s susfs-dev
 ```
@@ -111,15 +114,13 @@ curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kern
 > [!IMPORTANT]
 > 如何在 OTA 更新后保持 root 访问权限：
 
-
 #### 步骤：
 
 1. 系统更新后重启前
-
-   - OTA 安装后不要立即重启，将 SukiSU Ultra 安装到第二插槽  
+   - OTA 安装后不要立即重启，将 SukiSU Ultra 安装到第二插槽
    - 打开 SukiSU Ultra 管理器，在**刷入/修补内核**界面选择 **GKI/non_GKI install**，选择您的 `AnyKernel3` 内核 `zip` 文件，选择与当前运行插槽相对的插槽然后刷入重启。
 
-3. 替代方案：LKM 模式
+2. 替代方案：LKM 模式
 
    使用 [LKM 模式](#通用-gki) 在 OTA 后安装到未使用的插槽。
 
@@ -130,6 +131,7 @@ curl -LSs "https://raw.githubusercontent.com/SukiSU-Ultra/SukiSU-Ultra/main/kern
 ## 验证
 
 安装后，验证一切是否正常工作，
+
 - 打开 SukiSU Ultra 管理器检查 root 工作状态
 - 使用 root 权限的应用程序来验证 root 访问是否工作正常
 - 在设置 -> 关于手机中检查内核版本
