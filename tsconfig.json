@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
@@ -13,7 +13,8 @@
     "outDir": "./dist",
     "rootDir": "./",
     "types": ["node", "serviceworker"],
-    "lib": ["ES2022", "WebWorker"]
+    "lib": ["ES2022", "WebWorker"],
+  "ignoreDeprecations": "5.0"
   },
   "ts-node": {
     "esm": true,
