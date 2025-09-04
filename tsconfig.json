@@ -14,7 +14,7 @@
     "rootDir": "./",
     "types": ["node", "serviceworker"],
     "lib": ["ES2022", "WebWorker"],
-  "ignoreDeprecations": "5.0"
+    "ignoreDeprecations": "5.0"
   },
   "ts-node": {
     "esm": true,
