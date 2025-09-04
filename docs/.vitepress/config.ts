@@ -12,8 +12,7 @@ import taskLists from 'markdown-it-task-lists'
 
 export default defineConfig({
   title: 'SukiSU-Ultra',
-  description:
-    'Next-Generation Android root solution with secure kernel-based su, wide compatibility, and modern tooling.',
+  description: 'Next-Generation Android root solution.',
 
   lastUpdated: true,
   cleanUrls: true,
@@ -86,9 +85,6 @@ export default defineConfig({
     // Essential favicon setup - synced from /favicon during build/dev
     ['link', { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
-    // (Removed PNG favicon and Apple Touch icon as only SVG is preferred)
-
-    // Safari Pinned Tab
     ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#64edff' }],
     // (Removed msapplication meta to avoid referencing non-existent files)
 
@@ -108,12 +104,8 @@ export default defineConfig({
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0, viewport-fit=cover' },
     ],
     ['meta', { name: 'format-detection', content: 'telephone=no' }],
-
-    // Enhanced Open Graph for global sharing
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'SukiSU-Ultra' }],
-    // (Removed OG PNG image and PNG icon links)
-    // (Removed OG image width/height/type as PNG social image is not used)
     ['meta', { property: 'og:url', content: 'https://sukisu.org/' }],
     ['meta', { property: 'og:locale', content: 'en_US' }],
     ['meta', { property: 'og:locale:alternate', content: 'zh_CN' }],
