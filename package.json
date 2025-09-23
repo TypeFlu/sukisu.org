@@ -35,7 +35,7 @@
     "@types/serviceworker": "^0.0.153",
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-mark": "^4.0.0",
-    "markdown-it-mathjax3": "^4.3.2",
+    "markdown-it-mathjax3": "^5.0.0",
     "markdown-it-sub": "^2.0.0",
     "markdown-it-task-lists": "^2.1.1",
     "prettier": "^3.6.2",
