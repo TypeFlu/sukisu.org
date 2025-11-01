@@ -1,1 +1,1 @@
-### This Site have been merged into sukisu-ultra main repository
+# Legacy Documentation made with vitepress 
